@@ -31,7 +31,7 @@ if ($_POST["email"] && filter_var($_POST["email"], FILTER_VALIDATE_EMAIL) === fa
                 $headers = "From: ".$_POST["email"];
 
                 if (mail($emailTo, $subject, $content, $headers)) {
-                    $successMessage =   $error = '<div class="alert alert-success" role="alert">Your message was sent, we\'ll get back to you ASAP!</div>'; 
+                    $successMessage = '<div class="alert alert-success" role="alert">Your message was sent, we\'ll get back to you ASAP!</div>'; 
             } else {
                  $error = '<div class="alert alert-danger" role="alert"><p><strong>Your message couldn\'t be sent - please try again later</div>';
             }
